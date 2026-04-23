@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_shared_shared_cells",
+  "info": {
+    "displayName": "Shared.Cell"
+  },
+  "options": {},
+  "attributes": {
+    "value": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

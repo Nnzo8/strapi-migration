@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_sections_mistakes",
+  "info": {
+    "displayName": "mistakes"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "mistakeTable": {
+      "type": "component",
+      "component": "shared.shared-table",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

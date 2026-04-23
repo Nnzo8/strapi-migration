@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_sections_patterns",
+  "info": {
+    "displayName": "patterns"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "rules": {
+      "type": "component",
+      "component": "shared.simple-text",
+      "repeatable": true
+    },
+    "code": {
+      "type": "component",
+      "component": "shared.shared-code-block",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

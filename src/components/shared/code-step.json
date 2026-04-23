@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_shared_code_steps",
+  "info": {
+    "displayName": "code-step"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "code": {
+      "type": "text"
+    },
+    "language": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

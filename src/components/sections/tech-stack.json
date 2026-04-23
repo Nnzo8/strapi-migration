@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_sections_tech_stacks",
+  "info": {
+    "displayName": "TechStack"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "dataTable": {
+      "type": "component",
+      "component": "shared.shared-table",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

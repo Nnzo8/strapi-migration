@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_shared_shared_code_blocks",
+  "info": {
+    "displayName": "Shared.CodeBlock"
+  },
+  "options": {},
+  "attributes": {
+    "mainCode": {
+      "type": "string"
+    },
+    "code": {
+      "type": "text"
+    },
+    "language": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

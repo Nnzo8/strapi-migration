@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_sections_arch_cards",
+  "info": {
+    "displayName": "ArchCard"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "body": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_tool_features",
+  "info": {
+    "displayName": "tool-feature"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "body": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

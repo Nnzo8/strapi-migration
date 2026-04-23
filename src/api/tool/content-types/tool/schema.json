@@ -1,0 +1,64 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tools",
+  "info": {
+    "singularName": "tool",
+    "pluralName": "tools",
+    "displayName": "Tool"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "key": {
+      "type": "string",
+      "unique": true
+    },
+    "label": {
+      "type": "string"
+    },
+    "iconKey": {
+      "type": "string"
+    },
+    "logoUrl": {
+      "type": "string"
+    },
+    "color": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "website": {
+      "type": "string"
+    },
+    "usedBy": {
+      "type": "json"
+    },
+    "features": {
+      "type": "component",
+      "component": "shared.tool-feature",
+      "repeatable": true
+    },
+    "whyWeUseIt": {
+      "type": "text"
+    },
+    "install": {
+      "type": "component",
+      "component": "shared.code-step",
+      "repeatable": true
+    },
+    "basicUse": {
+      "type": "component",
+      "component": "shared.code-step",
+      "repeatable": true
+    }
+  }
+}

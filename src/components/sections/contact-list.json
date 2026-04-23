@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_sections_contact_lists",
+  "info": {
+    "displayName": "contact-list"
+  },
+  "options": {},
+  "attributes": {
+    "contacts": {
+      "type": "component",
+      "component": "sections.contacts",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}
