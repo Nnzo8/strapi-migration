@@ -11,27 +11,65 @@
   },
   "pluginOptions": {},
   "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "key": {
+      "type": "string",
+      "unique": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "projectStatus": {
+      "type": "enumeration",
+      "enum": [
+        "Live",
+        "Dev",
+        "Revamp"
+      ]
+    },
+    "icon": {
+      "type": "string"
+    },
     "team": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::team.team",
       "inversedBy": "projects"
     },
-    "name": {
-      "type": "string"
+    "projectMeta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.project-meta"
     },
-    "key": {
-      "type": "uid",
-      "targetField": "name"
-    },
-    "description": {
+    "purpose": {
       "type": "text"
     },
-    "icon": {
-      "type": "string"
+    "features": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.tool-feature"
     },
-    "projectStatus": {
-      "type": "string"
+    "folderStructure": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.code-block"
+    },
+    "gettingStarted": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.code-step"
+    },
+    "contacts": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.contact"
+    },
+    "links": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.link"
     }
   }
 }

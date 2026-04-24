@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_sections_contact_cards",
+  "info": {
+    "displayName": "ContactCard",
+    "icon": "user"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "role": {
+      "type": "string"
+    },
+    "initials": {
+      "type": "string"
+    },
+    "color": {
+      "type": "string"
+    }
+  }
+}

@@ -1,24 +1,24 @@
 {
   "collectionName": "components_shared_steps",
   "info": {
-    "displayName": "steps"
+    "displayName": "Step",
+    "icon": "check"
   },
   "options": {},
   "attributes": {
-    "icon": {
-      "type": "string"
-    },
     "title": {
       "type": "string"
     },
     "description": {
       "type": "text"
     },
+    "icon": {
+      "type": "string"
+    },
     "code": {
       "type": "component",
-      "component": "shared.shared-code-block",
-      "repeatable": false
+      "repeatable": false,
+      "component": "shared.code-block"
     }
-  },
-  "config": {}
+  }
 }

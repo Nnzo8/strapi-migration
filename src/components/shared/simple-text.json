@@ -1,13 +1,13 @@
 {
   "collectionName": "components_shared_simple_texts",
   "info": {
-    "displayName": "SimpleText"
+    "displayName": "SimpleText",
+    "icon": "file-text"
   },
   "options": {},
   "attributes": {
     "text": {
-      "type": "string"
+      "type": "text"
     }
-  },
-  "config": {}
+  }
 }

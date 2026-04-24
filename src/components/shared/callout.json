@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_shared_callouts",
+  "info": {
+    "displayName": "Callout",
+    "icon": "alert-circle"
+  },
+  "options": {},
+  "attributes": {
+    "type": { "type": "string" },
+    "message": { "type": "text" }
+  }
+}

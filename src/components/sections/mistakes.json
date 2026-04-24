@@ -1,7 +1,8 @@
 {
   "collectionName": "components_sections_mistakes",
   "info": {
-    "displayName": "mistakes"
+    "displayName": "Mistakes",
+    "icon": "alert-circle"
   },
   "options": {},
   "attributes": {
@@ -10,9 +11,8 @@
     },
     "mistakeTable": {
       "type": "component",
-      "component": "shared.shared-table",
-      "repeatable": false
+      "repeatable": false,
+      "component": "shared.table"
     }
-  },
-  "config": {}
+  }
 }

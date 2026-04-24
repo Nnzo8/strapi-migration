@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_shared_table_cells",
+  "info": {
+    "displayName": "TableCell",
+    "icon": "grid"
+  },
+  "options": {},
+  "attributes": {
+    "value": {
+      "type": "text"
+    }
+  }
+}

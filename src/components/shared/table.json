@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_shared_tables",
+  "info": {
+    "displayName": "Table",
+    "icon": "server"
+  },
+  "options": {},
+  "attributes": {
+    "headers": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.table-cell"
+    },
+    "rows": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.table-row"
+    }
+  }
+}

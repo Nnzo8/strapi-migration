@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_shared_patterns",
+  "info": {
+    "displayName": "Pattern",
+    "icon": "code"
+  },
+  "options": {},
+  "attributes": {
+    "title": { "type": "string" },
+    "description": { "type": "text" },
+    "rules": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.table-cell"
+    },
+    "code": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.code-block"
+    },
+    "callout": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.callout"
+    }
+  }
+}

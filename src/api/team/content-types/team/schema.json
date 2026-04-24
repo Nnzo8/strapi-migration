@@ -15,31 +15,13 @@
       "type": "string"
     },
     "key": {
-      "type": "uid",
-      "targetField": "label"
+      "type": "string",
+      "unique": true
     },
     "color": {
       "type": "string"
     },
     "icon": {
-      "type": "string"
-    },
-    "sections": {
-      "type": "dynamiczone",
-      "components": [
-        "sections.tech-stack",
-        "sections.getting-started",
-        "sections.folder-arch",
-        "sections.mistakes",
-        "sections.projects",
-        "sections.coding-patterns",
-        "sections.contact-list"
-      ]
-    },
-    "gradient": {
-      "type": "string"
-    },
-    "subtitle": {
       "type": "string"
     },
     "description": {
@@ -50,6 +32,35 @@
       "relation": "oneToMany",
       "target": "api::project.project",
       "mappedBy": "team"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "gradient": {
+      "type": "string"
+    },
+    "sections": {
+      "type": "dynamiczone",
+      "components": [
+        "sections.tech-stack",
+        "sections.getting-started",
+        "sections.folder-arch",
+        "shared.coding-patterns",
+        "sections.mistakes",
+        "sections.contact-list",
+        "sections.projects",
+        "sections.nc-design-basics",
+        "sections.nc-ux-design",
+        "sections.nc-prototype",
+        "sections.nc-web-design",
+        "shared.simple-text",
+        "sections.branding",
+        "sections.color-palette",
+        "sections.grid",
+        "sections.iconography",
+        "sections.spacing",
+        "sections.typography"
+      ]
     }
   }
 }

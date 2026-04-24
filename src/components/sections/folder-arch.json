@@ -1,20 +1,20 @@
 {
   "collectionName": "components_sections_folder_arches",
   "info": {
-    "displayName": "folder_arch"
+    "displayName": "FolderArch",
+    "icon": "folder"
   },
   "options": {},
   "attributes": {
     "cards": {
       "type": "component",
-      "component": "sections.arch-card",
-      "repeatable": true
+      "repeatable": true,
+      "component": "sections.folder-card"
     },
     "maincode": {
       "type": "component",
-      "component": "shared.shared-code-block",
-      "repeatable": false
+      "repeatable": false,
+      "component": "shared.code-block"
     }
-  },
-  "config": {}
+  }
 }

@@ -1,20 +1,18 @@
 {
   "collectionName": "components_sections_getting_starteds",
   "info": {
-    "displayName": "GettingStarted"
+    "displayName": "GettingStarted",
+    "icon": "play"
   },
   "options": {},
   "attributes": {
     "steps": {
       "type": "component",
-      "component": "shared.steps",
-      "repeatable": true
+      "repeatable": true,
+      "component": "shared.step"
     },
     "mainCode": {
-      "type": "component",
-      "component": "shared.shared-code-block",
-      "repeatable": true
+      "type": "json"
     }
-  },
-  "config": {}
+  }
 }

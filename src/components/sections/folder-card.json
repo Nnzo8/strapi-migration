@@ -1,22 +1,22 @@
 {
-  "collectionName": "components_shared_code_steps",
+  "collectionName": "components_sections_folder_cards",
   "info": {
-    "displayName": "code-step"
+    "displayName": "FolderCard",
+    "icon": "folder"
   },
   "options": {},
   "attributes": {
     "title": {
       "type": "string"
     },
-    "description": {
+    "body": {
       "type": "text"
     },
-    "code": {
+    "icon": {
       "type": "string"
     },
-    "language": {
+    "accent": {
       "type": "string"
     }
-  },
-  "config": {}
+  }
 }

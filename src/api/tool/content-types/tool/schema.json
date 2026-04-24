@@ -50,12 +50,12 @@
     "whyWeUseIt": {
       "type": "text"
     },
-    "install": {
+    "basicUse": {
       "type": "component",
       "component": "shared.code-step",
       "repeatable": true
     },
-    "basicUse": {
+    "install": {
       "type": "component",
       "component": "shared.code-step",
       "repeatable": true

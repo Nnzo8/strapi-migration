@@ -1,38 +1,30 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
-export interface SectionsArchCard extends Struct.ComponentSchema {
-  collectionName: 'components_sections_arch_cards';
+export interface SectionsBranding extends Struct.ComponentSchema {
+  collectionName: 'components_sections_brandings';
   info: {
-    displayName: 'ArchCard';
+    displayName: 'Branding';
   };
   attributes: {
-    body: Schema.Attribute.Text;
     title: Schema.Attribute.String;
   };
 }
 
-export interface SectionsCodingPatterns extends Struct.ComponentSchema {
-  collectionName: 'components_sections_coding_patterns';
+export interface SectionsColorPalette extends Struct.ComponentSchema {
+  collectionName: 'components_sections_color_palettes';
   info: {
-    displayName: 'coding-patterns';
-  };
-  attributes: {};
-}
-
-export interface SectionsContactList extends Struct.ComponentSchema {
-  collectionName: 'components_sections_contact_lists';
-  info: {
-    displayName: 'contact-list';
+    displayName: 'ColorPalette';
   };
   attributes: {
-    contacts: Schema.Attribute.Component<'sections.contacts', true>;
+    title: Schema.Attribute.String;
   };
 }
 
-export interface SectionsContacts extends Struct.ComponentSchema {
-  collectionName: 'components_sections_contacts';
+export interface SectionsContactCard extends Struct.ComponentSchema {
+  collectionName: 'components_sections_contact_cards';
   info: {
-    displayName: 'contacts';
+    displayName: 'ContactCard';
+    icon: 'user';
   };
   attributes: {
     color: Schema.Attribute.String;
@@ -42,14 +34,40 @@ export interface SectionsContacts extends Struct.ComponentSchema {
   };
 }
 
+export interface SectionsContactList extends Struct.ComponentSchema {
+  collectionName: 'components_sections_contact_lists';
+  info: {
+    displayName: 'ContactList';
+    icon: 'users';
+  };
+  attributes: {
+    contacts: Schema.Attribute.Component<'sections.contact-card', true>;
+  };
+}
+
 export interface SectionsFolderArch extends Struct.ComponentSchema {
   collectionName: 'components_sections_folder_arches';
   info: {
-    displayName: 'folder_arch';
+    displayName: 'FolderArch';
+    icon: 'folder';
   };
   attributes: {
-    cards: Schema.Attribute.Component<'sections.arch-card', true>;
-    maincode: Schema.Attribute.Component<'shared.shared-code-block', false>;
+    cards: Schema.Attribute.Component<'sections.folder-card', true>;
+    maincode: Schema.Attribute.Component<'shared.code-block', false>;
+  };
+}
+
+export interface SectionsFolderCard extends Struct.ComponentSchema {
+  collectionName: 'components_sections_folder_cards';
+  info: {
+    displayName: 'FolderCard';
+    icon: 'folder';
+  };
+  attributes: {
+    accent: Schema.Attribute.String;
+    body: Schema.Attribute.Text;
+    icon: Schema.Attribute.String;
+    title: Schema.Attribute.String;
   };
 }
 
@@ -57,33 +75,82 @@ export interface SectionsGettingStarted extends Struct.ComponentSchema {
   collectionName: 'components_sections_getting_starteds';
   info: {
     displayName: 'GettingStarted';
+    icon: 'play';
   };
   attributes: {
-    mainCode: Schema.Attribute.Component<'shared.shared-code-block', true>;
-    steps: Schema.Attribute.Component<'shared.steps', true>;
+    mainCode: Schema.Attribute.JSON;
+    steps: Schema.Attribute.Component<'shared.step', true>;
+  };
+}
+
+export interface SectionsGrid extends Struct.ComponentSchema {
+  collectionName: 'components_sections_grids';
+  info: {
+    displayName: 'Grid';
+  };
+  attributes: {
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SectionsIconography extends Struct.ComponentSchema {
+  collectionName: 'components_sections_iconographies';
+  info: {
+    displayName: 'Iconography';
+  };
+  attributes: {
+    title: Schema.Attribute.String;
   };
 }
 
 export interface SectionsMistakes extends Struct.ComponentSchema {
   collectionName: 'components_sections_mistakes';
   info: {
-    displayName: 'mistakes';
+    displayName: 'Mistakes';
+    icon: 'alert-circle';
   };
   attributes: {
-    mistakeTable: Schema.Attribute.Component<'shared.shared-table', false>;
+    mistakeTable: Schema.Attribute.Component<'shared.table', false>;
     title: Schema.Attribute.String;
   };
 }
 
-export interface SectionsPatterns extends Struct.ComponentSchema {
-  collectionName: 'components_sections_patterns';
+export interface SectionsNcDesignBasics extends Struct.ComponentSchema {
+  collectionName: 'components_sections_nc_design_basics';
   info: {
-    displayName: 'patterns';
+    displayName: 'NcDesignBasics';
   };
   attributes: {
-    code: Schema.Attribute.Component<'shared.shared-code-block', false>;
-    description: Schema.Attribute.Text;
-    rules: Schema.Attribute.Component<'shared.simple-text', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SectionsNcPrototype extends Struct.ComponentSchema {
+  collectionName: 'components_sections_nc_prototypes';
+  info: {
+    displayName: 'NcPrototype';
+  };
+  attributes: {
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SectionsNcUxDesign extends Struct.ComponentSchema {
+  collectionName: 'components_sections_nc_ux_designs';
+  info: {
+    displayName: 'NcUxDesign';
+  };
+  attributes: {
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SectionsNcWebDesign extends Struct.ComponentSchema {
+  collectionName: 'components_sections_nc_web_designs';
+  info: {
+    displayName: 'NcWebDesign';
+  };
+  attributes: {
     title: Schema.Attribute.String;
   };
 }
@@ -91,19 +158,67 @@ export interface SectionsPatterns extends Struct.ComponentSchema {
 export interface SectionsProjects extends Struct.ComponentSchema {
   collectionName: 'components_sections_projects';
   info: {
-    displayName: 'projects';
+    displayName: 'Projects';
+    icon: 'briefcase';
   };
-  attributes: {};
+  attributes: {
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SectionsSpacing extends Struct.ComponentSchema {
+  collectionName: 'components_sections_spacings';
+  info: {
+    displayName: 'Spacing';
+  };
+  attributes: {
+    title: Schema.Attribute.String;
+  };
 }
 
 export interface SectionsTechStack extends Struct.ComponentSchema {
   collectionName: 'components_sections_tech_stacks';
   info: {
     displayName: 'TechStack';
+    icon: 'layers';
   };
   attributes: {
-    dataTable: Schema.Attribute.Component<'shared.shared-table', false>;
+    dataTable: Schema.Attribute.Component<'shared.table', false>;
     title: Schema.Attribute.String;
+  };
+}
+
+export interface SectionsTypography extends Struct.ComponentSchema {
+  collectionName: 'components_sections_typographies';
+  info: {
+    displayName: 'Typography';
+  };
+  attributes: {
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SharedCallout extends Struct.ComponentSchema {
+  collectionName: 'components_shared_callouts';
+  info: {
+    displayName: 'Callout';
+    icon: 'alert-circle';
+  };
+  attributes: {
+    message: Schema.Attribute.Text;
+    type: Schema.Attribute.String;
+  };
+}
+
+export interface SharedCodeBlock extends Struct.ComponentSchema {
+  collectionName: 'components_shared_code_blocks';
+  info: {
+    displayName: 'CodeBlock';
+    icon: 'code';
+  };
+  attributes: {
+    code: Schema.Attribute.Text;
+    language: Schema.Attribute.String;
   };
 }
 
@@ -113,103 +228,78 @@ export interface SharedCodeStep extends Struct.ComponentSchema {
     displayName: 'code-step';
   };
   attributes: {
-    code: Schema.Attribute.Text;
+    code: Schema.Attribute.String;
     description: Schema.Attribute.Text;
     language: Schema.Attribute.String;
     title: Schema.Attribute.String;
   };
 }
 
-export interface SharedMedia extends Struct.ComponentSchema {
-  collectionName: 'components_shared_media';
+export interface SharedCodingPatterns extends Struct.ComponentSchema {
+  collectionName: 'components_shared_coding_patterns';
   info: {
-    displayName: 'Media';
-    icon: 'file-video';
+    displayName: 'CodingPatterns';
+    icon: 'code';
   };
   attributes: {
-    file: Schema.Attribute.Media<'images' | 'files' | 'videos'>;
+    layout: Schema.Attribute.String;
+    patterns: Schema.Attribute.Component<'shared.pattern', true>;
   };
 }
 
-export interface SharedQuote extends Struct.ComponentSchema {
-  collectionName: 'components_shared_quotes';
+export interface SharedContact extends Struct.ComponentSchema {
+  collectionName: 'components_shared_contacts';
   info: {
-    displayName: 'Quote';
-    icon: 'indent';
+    displayName: 'Contact';
+    icon: 'user';
   };
   attributes: {
-    body: Schema.Attribute.Text;
+    color: Schema.Attribute.String;
+    initials: Schema.Attribute.String;
+    name: Schema.Attribute.String;
+    role: Schema.Attribute.String;
+  };
+}
+
+export interface SharedLink extends Struct.ComponentSchema {
+  collectionName: 'components_shared_links';
+  info: {
+    displayName: 'Link';
+    icon: 'link';
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+    type: Schema.Attribute.String;
+    url: Schema.Attribute.String;
+  };
+}
+
+export interface SharedPattern extends Struct.ComponentSchema {
+  collectionName: 'components_shared_patterns';
+  info: {
+    displayName: 'Pattern';
+    icon: 'code';
+  };
+  attributes: {
+    callout: Schema.Attribute.Component<'shared.callout', false>;
+    code: Schema.Attribute.Component<'shared.code-block', false>;
+    description: Schema.Attribute.Text;
+    rules: Schema.Attribute.Component<'shared.table-cell', true>;
     title: Schema.Attribute.String;
   };
 }
 
-export interface SharedRichText extends Struct.ComponentSchema {
-  collectionName: 'components_shared_rich_texts';
+export interface SharedProjectMeta extends Struct.ComponentSchema {
+  collectionName: 'components_shared_project_metas';
   info: {
-    description: '';
-    displayName: 'Rich text';
-    icon: 'align-justify';
+    displayName: 'ProjectMeta';
+    icon: 'layer';
   };
   attributes: {
-    body: Schema.Attribute.RichText;
-  };
-}
-
-export interface SharedSeo extends Struct.ComponentSchema {
-  collectionName: 'components_shared_seos';
-  info: {
-    description: '';
-    displayName: 'Seo';
-    icon: 'allergies';
-    name: 'Seo';
-  };
-  attributes: {
-    metaDescription: Schema.Attribute.Text & Schema.Attribute.Required;
-    metaTitle: Schema.Attribute.String & Schema.Attribute.Required;
-    shareImage: Schema.Attribute.Media<'images'>;
-  };
-}
-
-export interface SharedSharedCell extends Struct.ComponentSchema {
-  collectionName: 'components_shared_shared_cells';
-  info: {
-    displayName: 'Shared.Cell';
-  };
-  attributes: {
-    value: Schema.Attribute.String;
-  };
-}
-
-export interface SharedSharedCodeBlock extends Struct.ComponentSchema {
-  collectionName: 'components_shared_shared_code_blocks';
-  info: {
-    displayName: 'Shared.CodeBlock';
-  };
-  attributes: {
-    code: Schema.Attribute.Text;
-    language: Schema.Attribute.String;
-    mainCode: Schema.Attribute.String;
-  };
-}
-
-export interface SharedSharedRows extends Struct.ComponentSchema {
-  collectionName: 'components_shared_shared_rows';
-  info: {
-    displayName: 'Shared.Rows';
-  };
-  attributes: {
-    cells: Schema.Attribute.Component<'shared.shared-cell', true>;
-  };
-}
-
-export interface SharedSharedTable extends Struct.ComponentSchema {
-  collectionName: 'components_shared_shared_tables';
-  info: {
-    displayName: 'Shared.Table';
-  };
-  attributes: {
-    headers: Schema.Attribute.Component<'shared.shared-cell', true>;
-    rows: Schema.Attribute.Component<'shared.shared-rows', true>;
+    deploy: Schema.Attribute.String;
+    repo: Schema.Attribute.String;
+    sprint: Schema.Attribute.String;
+    stack: Schema.Attribute.String;
   };
 }
 
@@ -217,34 +307,58 @@ export interface SharedSimpleText extends Struct.ComponentSchema {
   collectionName: 'components_shared_simple_texts';
   info: {
     displayName: 'SimpleText';
+    icon: 'file-text';
   };
   attributes: {
-    text: Schema.Attribute.String;
+    text: Schema.Attribute.Text;
   };
 }
 
-export interface SharedSlider extends Struct.ComponentSchema {
-  collectionName: 'components_shared_sliders';
-  info: {
-    description: '';
-    displayName: 'Slider';
-    icon: 'address-book';
-  };
-  attributes: {
-    files: Schema.Attribute.Media<'images', true>;
-  };
-}
-
-export interface SharedSteps extends Struct.ComponentSchema {
+export interface SharedStep extends Struct.ComponentSchema {
   collectionName: 'components_shared_steps';
   info: {
-    displayName: 'steps';
+    displayName: 'Step';
+    icon: 'check';
   };
   attributes: {
-    code: Schema.Attribute.Component<'shared.shared-code-block', false>;
+    code: Schema.Attribute.Component<'shared.code-block', false>;
     description: Schema.Attribute.Text;
     icon: Schema.Attribute.String;
     title: Schema.Attribute.String;
+  };
+}
+
+export interface SharedTable extends Struct.ComponentSchema {
+  collectionName: 'components_shared_tables';
+  info: {
+    displayName: 'Table';
+    icon: 'server';
+  };
+  attributes: {
+    headers: Schema.Attribute.Component<'shared.table-cell', true>;
+    rows: Schema.Attribute.Component<'shared.table-row', true>;
+  };
+}
+
+export interface SharedTableCell extends Struct.ComponentSchema {
+  collectionName: 'components_shared_table_cells';
+  info: {
+    displayName: 'TableCell';
+    icon: 'grid';
+  };
+  attributes: {
+    value: Schema.Attribute.Text;
+  };
+}
+
+export interface SharedTableRow extends Struct.ComponentSchema {
+  collectionName: 'components_shared_table_rows';
+  info: {
+    displayName: 'TableRow';
+    icon: 'layout';
+  };
+  attributes: {
+    cells: Schema.Attribute.Component<'shared.table-cell', true>;
   };
 }
 
@@ -262,28 +376,37 @@ export interface SharedToolFeature extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
-      'sections.arch-card': SectionsArchCard;
-      'sections.coding-patterns': SectionsCodingPatterns;
+      'sections.branding': SectionsBranding;
+      'sections.color-palette': SectionsColorPalette;
+      'sections.contact-card': SectionsContactCard;
       'sections.contact-list': SectionsContactList;
-      'sections.contacts': SectionsContacts;
       'sections.folder-arch': SectionsFolderArch;
+      'sections.folder-card': SectionsFolderCard;
       'sections.getting-started': SectionsGettingStarted;
+      'sections.grid': SectionsGrid;
+      'sections.iconography': SectionsIconography;
       'sections.mistakes': SectionsMistakes;
-      'sections.patterns': SectionsPatterns;
+      'sections.nc-design-basics': SectionsNcDesignBasics;
+      'sections.nc-prototype': SectionsNcPrototype;
+      'sections.nc-ux-design': SectionsNcUxDesign;
+      'sections.nc-web-design': SectionsNcWebDesign;
       'sections.projects': SectionsProjects;
+      'sections.spacing': SectionsSpacing;
       'sections.tech-stack': SectionsTechStack;
+      'sections.typography': SectionsTypography;
+      'shared.callout': SharedCallout;
+      'shared.code-block': SharedCodeBlock;
       'shared.code-step': SharedCodeStep;
-      'shared.media': SharedMedia;
-      'shared.quote': SharedQuote;
-      'shared.rich-text': SharedRichText;
-      'shared.seo': SharedSeo;
-      'shared.shared-cell': SharedSharedCell;
-      'shared.shared-code-block': SharedSharedCodeBlock;
-      'shared.shared-rows': SharedSharedRows;
-      'shared.shared-table': SharedSharedTable;
+      'shared.coding-patterns': SharedCodingPatterns;
+      'shared.contact': SharedContact;
+      'shared.link': SharedLink;
+      'shared.pattern': SharedPattern;
+      'shared.project-meta': SharedProjectMeta;
       'shared.simple-text': SharedSimpleText;
-      'shared.slider': SharedSlider;
-      'shared.steps': SharedSteps;
+      'shared.step': SharedStep;
+      'shared.table': SharedTable;
+      'shared.table-cell': SharedTableCell;
+      'shared.table-row': SharedTableRow;
       'shared.tool-feature': SharedToolFeature;
     }
   }

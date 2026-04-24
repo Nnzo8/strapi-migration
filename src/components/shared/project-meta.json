@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_shared_project_metas",
+  "info": {
+    "displayName": "ProjectMeta",
+    "icon": "layer"
+  },
+  "options": {},
+  "attributes": {
+    "stack": {
+      "type": "string"
+    },
+    "repo": {
+      "type": "string"
+    },
+    "deploy": {
+      "type": "string"
+    },
+    "sprint": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_shared_coding_patterns",
+  "info": {
+    "displayName": "CodingPatterns",
+    "icon": "code"
+  },
+  "options": {},
+  "attributes": {
+    "patterns": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.pattern"
+    },
+    "layout": {
+      "type": "string"
+    }
+  }
+}

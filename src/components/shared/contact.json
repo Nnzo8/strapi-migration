@@ -1,7 +1,8 @@
 {
-  "collectionName": "components_sections_contacts",
+  "collectionName": "components_shared_contacts",
   "info": {
-    "displayName": "contacts"
+    "displayName": "Contact",
+    "icon": "user"
   },
   "options": {},
   "attributes": {
@@ -17,6 +18,5 @@
     "color": {
       "type": "string"
     }
-  },
-  "config": {}
+  }
 }

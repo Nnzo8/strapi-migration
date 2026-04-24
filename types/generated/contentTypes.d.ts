@@ -442,9 +442,7 @@ export interface ApiAboutAbout extends Struct.SingleTypeSchema {
     draftAndPublish: false;
   };
   attributes: {
-    blocks: Schema.Attribute.DynamicZone<
-      ['shared.media', 'shared.quote', 'shared.rich-text', 'shared.slider']
-    >;
+    blocks: Schema.Attribute.DynamicZone<[]>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -474,7 +472,6 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    defaultSeo: Schema.Attribute.Component<'shared.seo', false>;
     favicon: Schema.Attribute.Media<'images' | 'files' | 'videos'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -502,12 +499,17 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    contacts: Schema.Attribute.Component<'shared.contact', true>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     description: Schema.Attribute.Text;
+    features: Schema.Attribute.Component<'shared.tool-feature', true>;
+    folderStructure: Schema.Attribute.Component<'shared.code-block', false>;
+    gettingStarted: Schema.Attribute.Component<'shared.code-step', true>;
     icon: Schema.Attribute.String;
-    key: Schema.Attribute.UID<'name'>;
+    key: Schema.Attribute.String & Schema.Attribute.Unique;
+    links: Schema.Attribute.Component<'shared.link', true>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -515,8 +517,10 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     name: Schema.Attribute.String;
-    projectStatus: Schema.Attribute.String;
+    projectMeta: Schema.Attribute.Component<'shared.project-meta', false>;
+    projectStatus: Schema.Attribute.Enumeration<['Live', 'Dev', 'Revamp']>;
     publishedAt: Schema.Attribute.DateTime;
+    purpose: Schema.Attribute.Text;
     team: Schema.Attribute.Relation<'manyToOne', 'api::team.team'>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -542,7 +546,7 @@ export interface ApiTeamTeam extends Struct.CollectionTypeSchema {
     description: Schema.Attribute.Text;
     gradient: Schema.Attribute.String;
     icon: Schema.Attribute.String;
-    key: Schema.Attribute.UID<'label'>;
+    key: Schema.Attribute.String & Schema.Attribute.Unique;
     label: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::team.team'> &
@@ -554,10 +558,21 @@ export interface ApiTeamTeam extends Struct.CollectionTypeSchema {
         'sections.tech-stack',
         'sections.getting-started',
         'sections.folder-arch',
+        'shared.coding-patterns',
         'sections.mistakes',
-        'sections.projects',
-        'sections.coding-patterns',
         'sections.contact-list',
+        'sections.projects',
+        'sections.nc-design-basics',
+        'sections.nc-ux-design',
+        'sections.nc-prototype',
+        'sections.nc-web-design',
+        'shared.simple-text',
+        'sections.branding',
+        'sections.color-palette',
+        'sections.grid',
+        'sections.iconography',
+        'sections.spacing',
+        'sections.typography',
       ]
     >;
     subtitle: Schema.Attribute.String;
