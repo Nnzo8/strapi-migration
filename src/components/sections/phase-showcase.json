@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_sections_phase_showcases",
+  "info": {
+    "displayName": "Phase Showcase",
+    "icon": "layer-group",
+    "description": "Centralized component for all 7 curriculum phases."
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subHeader": {
+      "type": "text"
+    },
+    "phase": {
+      "type": "enumeration",
+      "enum": [
+        "Phase 1 - Design Basics",
+        "Phase 2 - UX Design",
+        "Phase 3 - Wireframing",
+        "Phase 4 - Prototyping",
+        "Phase 5 - Web Design",
+        "Phase 6 - Print Design",
+        "Phase 7 - Brand & Storytelling"
+      ],
+      "required": true
+    }
+  }
+}

@@ -42,6 +42,7 @@
     "sections": {
       "type": "dynamiczone",
       "components": [
+        "sections.qa-stages",
         "sections.tech-stack",
         "sections.getting-started",
         "sections.folder-arch",
@@ -49,17 +50,14 @@
         "sections.mistakes",
         "sections.contact-list",
         "sections.projects",
-        "sections.nc-design-basics",
-        "sections.nc-ux-design",
-        "sections.nc-prototype",
-        "sections.nc-web-design",
+        "sections.nc-phase",
         "shared.simple-text",
         "sections.branding",
         "sections.color-palette",
         "sections.grid",
         "sections.iconography",
         "sections.spacing",
-        "sections.typography"
+        "sections.typography-scale"
       ]
     }
   }

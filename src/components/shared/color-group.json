@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_shared_color_groups",
+  "info": {
+    "displayName": "Color Group",
+    "icon": "layer-group"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "swatches": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.color-swatch"
+    }
+  }
+}

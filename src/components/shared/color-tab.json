@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_shared_color_tabs",
+  "info": {
+    "displayName": "Color Tab",
+    "icon": "folder"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "overview",
+        "shades",
+        "wcag"
+      ]
+    },
+    "groups": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.color-group"
+    },
+    "wcagPairs": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.wcag-pair"
+    },
+    "wcagNote": {
+      "type": "text"
+    }
+  }
+}

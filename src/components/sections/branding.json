@@ -1,1 +1,36 @@
-{ "collectionName": "components_sections_brandings", "info": { "displayName": "Branding" }, "options": {}, "attributes": { "title": { "type": "string" } } }
+{
+  "collectionName": "components_sections_brandings",
+  "info": {
+    "displayName": "Branding",
+    "description": "Company branding assets including logos, favicons, and sidebar variants."
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subHeader": {
+      "type": "text"
+    },
+    "mainLogos": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.brand-asset"
+    },
+    "favicon": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.brand-asset"
+    },
+    "sidebarCollapsed": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.brand-asset"
+    },
+    "sidebarExpanded": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.brand-asset"
+    }
+  }
+}

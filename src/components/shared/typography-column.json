@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_shared_typography_columns",
+  "info": {
+    "displayName": "Typography Column",
+    "icon": "align-justify"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "weight": {
+      "type": "string"
+    },
+    "rows": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.typography-row"
+    }
+  }
+}

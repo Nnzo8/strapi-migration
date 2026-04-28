@@ -17,7 +17,12 @@
     },
     "blocks": {
       "type": "dynamiczone",
-      "components": []
+            "components": [
+        "sections.branding",
+        "sections.phase-showcase",
+        "sections.qa-stages",
+        "sections.typography-scale"
+      ]
     }
   }
 }

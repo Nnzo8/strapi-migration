@@ -1,1 +1,21 @@
-{ "collectionName": "components_sections_color_palettes", "info": { "displayName": "ColorPalette" }, "options": {}, "attributes": { "title": { "type": "string" } } }
+{
+  "collectionName": "components_sections_color_palettes",
+  "info": {
+    "displayName": "Color Palette",
+    "description": "Visual color palette with overview, shades, and WCAG compliance tabs."
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subHeader": {
+      "type": "text"
+    },
+    "tabs": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.color-tab"
+    }
+  }
+}
