@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_landing_bullet_items",
+  "info": {
+    "displayName": "BulletItem",
+    "icon": "check-circle"
+  },
+  "attributes": {
+    "text": {
+      "type": "text"
+    }
+  }
+}

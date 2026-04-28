@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_landing_meta_items",
+  "info": {
+    "displayName": "MetaItem",
+    "icon": "information"
+  },
+  "attributes": {
+    "icon": {
+      "type": "string"
+    },
+    "label": {
+      "type": "string"
+    },
+    "value": {
+      "type": "string"
+    }
+  }
+}

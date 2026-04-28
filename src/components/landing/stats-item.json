@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_landing_stats_items",
+  "info": {
+    "displayName": "StatsItem",
+    "icon": "chart-bar"
+  },
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "value": {
+      "type": "string"
+    }
+  }
+}

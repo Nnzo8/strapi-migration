@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_landing_company_abouts",
+  "info": {
+    "displayName": "CompanyAbout",
+    "icon": "building"
+  },
+  "attributes": {
+    "eyebrow": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "bullets": {
+      "type": "component",
+      "repeatable": true,
+      "component": "landing.bullet-item"
+    },
+    "metaItems": {
+      "type": "component",
+      "repeatable": true,
+      "component": "landing.meta-item"
+    },
+    "venuesLabel": {
+      "type": "string"
+    },
+    "venues": {
+      "type": "component",
+      "repeatable": true,
+      "component": "landing.tag-item"
+    },
+    "link": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.link"
+    }
+  }
+}

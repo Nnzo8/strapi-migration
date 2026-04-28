@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_landing_cta_banners",
+  "info": {
+    "displayName": "CtaBanner",
+    "icon": "arrow-right"
+  },
+  "attributes": {
+    "eyebrow": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "links": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.link"
+    }
+  }
+}
