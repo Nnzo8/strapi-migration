@@ -12,6 +12,9 @@
       "type": "string",
       "required": true
     },
+    "headlineAccent": {
+      "type": "string"
+    },
     "subheadline": {
       "type": "text"
     },
