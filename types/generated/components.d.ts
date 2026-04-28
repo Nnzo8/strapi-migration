@@ -1,5 +1,138 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface LandingBulletItem extends Struct.ComponentSchema {
+  collectionName: 'components_landing_bullet_items';
+  info: {
+    displayName: 'BulletItem';
+    icon: 'check-circle';
+  };
+  attributes: {
+    text: Schema.Attribute.Text;
+  };
+}
+
+export interface LandingCompanyAbout extends Struct.ComponentSchema {
+  collectionName: 'components_landing_company_abouts';
+  info: {
+    displayName: 'CompanyAbout';
+    icon: 'building';
+  };
+  attributes: {
+    bullets: Schema.Attribute.Component<'landing.bullet-item', true>;
+    description: Schema.Attribute.Text;
+    eyebrow: Schema.Attribute.String;
+    link: Schema.Attribute.Component<'shared.link', false>;
+    metaItems: Schema.Attribute.Component<'landing.meta-item', true>;
+    title: Schema.Attribute.String;
+    venues: Schema.Attribute.Component<'landing.tag-item', true>;
+    venuesLabel: Schema.Attribute.String;
+  };
+}
+
+export interface LandingCtaBanner extends Struct.ComponentSchema {
+  collectionName: 'components_landing_cta_banners';
+  info: {
+    displayName: 'CtaBanner';
+    icon: 'arrow-right';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    eyebrow: Schema.Attribute.String;
+    links: Schema.Attribute.Component<'shared.link', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface LandingFeatureItem extends Struct.ComponentSchema {
+  collectionName: 'components_landing_feature_items';
+  info: {
+    displayName: 'FeatureItem';
+    icon: 'star';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    icon: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface LandingFeaturesGrid extends Struct.ComponentSchema {
+  collectionName: 'components_landing_features_grids';
+  info: {
+    displayName: 'FeaturesGrid';
+    icon: 'layout';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    eyebrow: Schema.Attribute.String;
+    items: Schema.Attribute.Component<'landing.feature-item', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface LandingHero extends Struct.ComponentSchema {
+  collectionName: 'components_landing_heroes';
+  info: {
+    displayName: 'Hero';
+    icon: 'star';
+  };
+  attributes: {
+    eyebrow: Schema.Attribute.String;
+    headline: Schema.Attribute.String & Schema.Attribute.Required;
+    links: Schema.Attribute.Component<'shared.link', true>;
+    subheadline: Schema.Attribute.Text;
+  };
+}
+
+export interface LandingMetaItem extends Struct.ComponentSchema {
+  collectionName: 'components_landing_meta_items';
+  info: {
+    displayName: 'MetaItem';
+    icon: 'information';
+  };
+  attributes: {
+    icon: Schema.Attribute.String;
+    label: Schema.Attribute.String;
+    value: Schema.Attribute.String;
+  };
+}
+
+export interface LandingStatsItem extends Struct.ComponentSchema {
+  collectionName: 'components_landing_stats_items';
+  info: {
+    displayName: 'StatsItem';
+    icon: 'chart-bar';
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+    value: Schema.Attribute.String;
+  };
+}
+
+export interface LandingTagItem extends Struct.ComponentSchema {
+  collectionName: 'components_landing_tag_items';
+  info: {
+    displayName: 'TagItem';
+    icon: 'tag';
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+  };
+}
+
+export interface LandingTeamShowcase extends Struct.ComponentSchema {
+  collectionName: 'components_landing_team_showcases';
+  info: {
+    displayName: 'TeamShowcase';
+    icon: 'users';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    eyebrow: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface SectionsBranding extends Struct.ComponentSchema {
   collectionName: 'components_sections_brandings';
   info: {
@@ -376,6 +509,16 @@ export interface SharedToolFeature extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'landing.bullet-item': LandingBulletItem;
+      'landing.company-about': LandingCompanyAbout;
+      'landing.cta-banner': LandingCtaBanner;
+      'landing.feature-item': LandingFeatureItem;
+      'landing.features-grid': LandingFeaturesGrid;
+      'landing.hero': LandingHero;
+      'landing.meta-item': LandingMetaItem;
+      'landing.stats-item': LandingStatsItem;
+      'landing.tag-item': LandingTagItem;
+      'landing.team-showcase': LandingTeamShowcase;
       'sections.branding': SectionsBranding;
       'sections.color-palette': SectionsColorPalette;
       'sections.contact-card': SectionsContactCard;

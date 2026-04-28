@@ -1,0 +1,31 @@
+{
+  "kind": "singleType",
+  "collectionName": "landing_pages",
+  "info": {
+    "singularName": "landing-page",
+    "pluralName": "landing-pages",
+    "displayName": "Landing Page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "sections": {
+      "type": "dynamiczone",
+      "components": [
+        "landing.hero",
+        "landing.stats-item",
+        "landing.team-showcase",
+        "landing.features-grid",
+        "landing.company-about",
+        "landing.cta-banner",
+        "shared.simple-text"
+      ]
+    }
+  }
+}

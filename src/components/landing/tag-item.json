@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_landing_tag_items",
+  "info": {
+    "displayName": "TagItem",
+    "icon": "tag"
+  },
+  "attributes": {
+    "label": {
+      "type": "string"
+    }
+  }
+}

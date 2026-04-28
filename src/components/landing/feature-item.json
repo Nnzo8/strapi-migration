@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_landing_feature_items",
+  "info": {
+    "displayName": "FeatureItem",
+    "icon": "star"
+  },
+  "attributes": {
+    "icon": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

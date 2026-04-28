@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_landing_features_grids",
+  "info": {
+    "displayName": "FeaturesGrid",
+    "icon": "layout"
+  },
+  "attributes": {
+    "eyebrow": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "landing.feature-item"
+    }
+  }
+}
