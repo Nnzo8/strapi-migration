@@ -79,6 +79,7 @@ export interface LandingHero extends Struct.ComponentSchema {
   attributes: {
     eyebrow: Schema.Attribute.String;
     headline: Schema.Attribute.String & Schema.Attribute.Required;
+    headlineAccent: Schema.Attribute.String;
     links: Schema.Attribute.Component<'shared.link', true>;
     subheadline: Schema.Attribute.Text;
   };

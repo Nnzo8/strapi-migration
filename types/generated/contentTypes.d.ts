@@ -527,6 +527,37 @@ export interface ApiLandingPageLandingPage extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiNavbarNavbar extends Struct.SingleTypeSchema {
+  collectionName: 'navbars';
+  info: {
+    displayName: 'Navbar';
+    pluralName: 'navbars';
+    singularName: 'navbar';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    cta: Schema.Attribute.Component<'shared.link', false>;
+    links: Schema.Attribute.Component<'shared.link', true>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::navbar.navbar'
+    > &
+      Schema.Attribute.Private;
+    logoSubtext: Schema.Attribute.String;
+    logoText: Schema.Attribute.String & Schema.Attribute.Required;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiProjectProject extends Struct.CollectionTypeSchema {
   collectionName: 'projects';
   info: {
@@ -1173,6 +1204,7 @@ declare module '@strapi/strapi' {
       'api::about.about': ApiAboutAbout;
       'api::global.global': ApiGlobalGlobal;
       'api::landing-page.landing-page': ApiLandingPageLandingPage;
+      'api::navbar.navbar': ApiNavbarNavbar;
       'api::project.project': ApiProjectProject;
       'api::team.team': ApiTeamTeam;
       'api::tool.tool': ApiToolTool;
