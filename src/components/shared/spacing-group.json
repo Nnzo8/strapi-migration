@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_shared_spacing_groups",
+  "info": {
+    "displayName": "Spacing Group",
+    "icon": "layers"
+  },
+  "options": {},
+  "attributes": {
+    "label": { "type": "string" },
+    "description": { "type": "text" },
+    "tokens": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.spacing-token"
+    }
+  }
+}

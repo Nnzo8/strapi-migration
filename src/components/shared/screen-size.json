@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_shared_screen_sizes",
+  "info": {
+    "displayName": "Screen Size",
+    "icon": "monitor"
+  },
+  "options": {},
+  "attributes": {
+    "width": { "type": "integer" },
+    "height": { "type": "integer" }
+  }
+}

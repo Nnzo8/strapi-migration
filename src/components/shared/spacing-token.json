@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_shared_spacing_tokens",
+  "info": {
+    "displayName": "Spacing Token",
+    "icon": "move"
+  },
+  "options": {},
+  "attributes": {
+    "name": { "type": "string" },
+    "px": { "type": "integer" },
+    "rem": { "type": "string" },
+    "tailwind": { "type": "string" },
+    "usage": { "type": "string" }
+  }
+}

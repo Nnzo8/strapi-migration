@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_shared_button_tabs",
+  "info": {
+    "displayName": "Button Tab",
+    "icon": "folder"
+  },
+  "options": {},
+  "attributes": {
+    "label": { "type": "string" },
+    "variant": { "type": "string" },
+    "defaultTag": { "type": "string" }
+  }
+}

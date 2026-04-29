@@ -11,8 +11,11 @@
     },
     "mistakeTable": {
       "type": "component",
-      "repeatable": false,
-      "component": "shared.table"
+      "component": "shared.table",
+      "repeatable": false
+    },
+    "subHeader": {
+      "type": "text"
     }
   }
 }

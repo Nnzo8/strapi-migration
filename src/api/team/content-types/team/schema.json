@@ -57,6 +57,7 @@
         "sections.grid",
         "sections.iconography",
         "sections.spacing",
+        "sections.button-showcase",
         "sections.typography-scale"
       ]
     }

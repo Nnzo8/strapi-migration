@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_shared_grid_groups",
+  "info": {
+    "displayName": "Grid Group",
+    "icon": "grid"
+  },
+  "options": {},
+  "attributes": {
+    "sectionLabel": { "type": "string" },
+    "tierLabel": { "type": "string" },
+    "screens": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.screen-size"
+    }
+  }
+}

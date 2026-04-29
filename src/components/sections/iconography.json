@@ -1,1 +1,29 @@
-{ "collectionName": "components_sections_iconographies", "info": { "displayName": "Iconography" }, "options": {}, "attributes": { "title": { "type": "string" } } }
+{
+  "collectionName": "components_sections_iconographies",
+  "info": {
+    "displayName": "Iconography",
+    "icon": "flag"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "sizes": {
+      "type": "component",
+      "component": "shared.icon-size",
+      "repeatable": true
+    },
+    "icons": {
+      "type": "component",
+      "component": "shared.fa-icon",
+      "repeatable": true
+    },
+    "subHeader": {
+      "type": "text"
+    }
+  }
+}

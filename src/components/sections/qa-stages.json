@@ -16,6 +16,9 @@
     },
     "layout": {
       "type": "string"
+    },
+    "subHeader": {
+      "type": "text"
     }
   }
 }
