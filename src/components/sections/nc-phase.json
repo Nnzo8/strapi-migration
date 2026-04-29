@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_sections_nc_phases",
+  "info": {
+    "displayName": "NC Phase",
+    "icon": "layer-group"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subHeader": {
+      "type": "text"
+    },
+    "phase": {
+      "type": "enumeration",
+      "enum": [
+        "nc-design-basics",
+        "nc-ux-design",
+        "nc-wireframing",
+        "nc-prototype",
+        "nc-web-design",
+        "nc-print-design",
+        "nc-brand-storytelling"
+      ]
+    }
+  }
+}

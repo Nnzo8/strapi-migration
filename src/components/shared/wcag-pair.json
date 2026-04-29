@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_shared_wcag_pairs",
+  "info": {
+    "displayName": "WCAG Pair",
+    "icon": "check"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "foreground": {
+      "type": "string"
+    },
+    "background": {
+      "type": "string"
+    },
+    "ratio": {
+      "type": "string"
+    },
+    "aaNormal": {
+      "type": "boolean",
+      "default": true
+    },
+    "aaLarge": {
+      "type": "boolean",
+      "default": true
+    },
+    "aaaNormal": {
+      "type": "boolean",
+      "default": false
+    },
+    "aaaLarge": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

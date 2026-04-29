@@ -1,1 +1,27 @@
-{ "collectionName": "components_sections_grids", "info": { "displayName": "Grid" }, "options": {}, "attributes": { "title": { "type": "string" } } }
+{
+  "collectionName": "components_sections_grids",
+  "info": {
+    "displayName": "Grid",
+    "icon": "grid"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "groups": {
+      "type": "component",
+      "component": "shared.grid-group",
+      "repeatable": true
+    },
+    "subHeader": {
+      "type": "text"
+    },
+    "layout": {
+      "type": "string"
+    }
+  }
+}

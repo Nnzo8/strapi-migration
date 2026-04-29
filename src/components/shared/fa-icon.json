@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_shared_fa_icons",
+  "info": {
+    "displayName": "FA Icon",
+    "icon": "flag"
+  },
+  "options": {},
+  "attributes": {
+    "name": { "type": "string" },
+    "faClass": { "type": "string" },
+    "description": { "type": "string" }
+  }
+}

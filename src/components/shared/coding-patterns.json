@@ -8,11 +8,17 @@
   "attributes": {
     "patterns": {
       "type": "component",
-      "repeatable": true,
-      "component": "shared.pattern"
+      "component": "shared.pattern",
+      "repeatable": true
     },
     "layout": {
       "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "subHeader": {
+      "type": "text"
     }
   }
 }

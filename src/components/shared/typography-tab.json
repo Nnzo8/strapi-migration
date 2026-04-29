@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_shared_typography_tabs",
+  "info": {
+    "displayName": "Typography Tab",
+    "icon": "folder"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "fontName": {
+      "type": "string"
+    },
+    "preview": {
+      "type": "string"
+    },
+    "columns": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.typography-column"
+    }
+  }
+}

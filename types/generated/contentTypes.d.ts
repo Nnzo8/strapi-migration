@@ -442,7 +442,15 @@ export interface ApiAboutAbout extends Struct.SingleTypeSchema {
     draftAndPublish: false;
   };
   attributes: {
-    blocks: Schema.Attribute.DynamicZone<[]>;
+    blocks: Schema.Attribute.DynamicZone<
+      [
+        'sections.branding',
+        'sections.phase-showcase',
+        'sections.qa-stages',
+        'sections.button-showcase',
+        'sections.typography-scale',
+      ]
+    >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -625,6 +633,7 @@ export interface ApiTeamTeam extends Struct.CollectionTypeSchema {
     publishedAt: Schema.Attribute.DateTime;
     sections: Schema.Attribute.DynamicZone<
       [
+        'sections.qa-stages',
         'sections.tech-stack',
         'sections.getting-started',
         'sections.folder-arch',
@@ -632,17 +641,15 @@ export interface ApiTeamTeam extends Struct.CollectionTypeSchema {
         'sections.mistakes',
         'sections.contact-list',
         'sections.projects',
-        'sections.nc-design-basics',
-        'sections.nc-ux-design',
-        'sections.nc-prototype',
-        'sections.nc-web-design',
+        'sections.nc-phase',
         'shared.simple-text',
         'sections.branding',
         'sections.color-palette',
         'sections.grid',
         'sections.iconography',
         'sections.spacing',
-        'sections.typography',
+        'sections.button-showcase',
+        'sections.typography-scale',
       ]
     >;
     subtitle: Schema.Attribute.String;

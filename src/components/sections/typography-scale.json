@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_sections_typography_scales",
+  "info": {
+    "displayName": "Typography Scale",
+    "description": "Visual typography scale with tabbed contexts (Web, Mobile, etc.)"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subHeader": {
+      "type": "text"
+    },
+    "tabs": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.typography-tab"
+    }
+  }
+}

@@ -1,1 +1,30 @@
-{ "collectionName": "components_sections_spacings", "info": { "displayName": "Spacing" }, "options": {}, "attributes": { "title": { "type": "string" } } }
+{
+  "collectionName": "components_sections_spacings",
+  "info": {
+    "displayName": "Spacing",
+    "icon": "move"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "groups": {
+      "type": "component",
+      "component": "shared.spacing-group",
+      "repeatable": true
+    },
+    "note": {
+      "type": "text"
+    },
+    "type": {
+      "type": "string"
+    },
+    "subHeader": {
+      "type": "text"
+    }
+  }
+}

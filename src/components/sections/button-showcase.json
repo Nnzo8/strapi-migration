@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_sections_button_showcases",
+  "info": {
+    "displayName": "Button Showcase",
+    "icon": "cursor-click",
+    "description": "Tabbed button style specimens matching hardcoded UI/UX data."
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subHeader": {
+      "type": "text"
+    },
+    "tabs": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.button-tab"
+    }
+  }
+}

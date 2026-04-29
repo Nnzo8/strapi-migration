@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_shared_brand_assets",
+  "info": {
+    "displayName": "Brand Asset",
+    "icon": "image"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "asset": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images", "files"]
+    },
+    "background": {
+      "type": "string"
+    },
+    "width": {
+      "type": "string"
+    },
+    "height": {
+      "type": "string"
+    },
+    "color": {
+      "type": "string"
+    },
+    "bordered": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

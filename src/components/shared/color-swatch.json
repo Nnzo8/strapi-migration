@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_color_swatches",
+  "info": {
+    "displayName": "Color Swatch",
+    "icon": "palette"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "hex": {
+      "type": "string"
+    }
+  }
+}

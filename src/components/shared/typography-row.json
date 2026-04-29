@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_typography_rows",
+  "info": {
+    "displayName": "Typography Row",
+    "icon": "font"
+  },
+  "options": {},
+  "attributes": {
+    "tag": {
+      "type": "string"
+    },
+    "size": {
+      "type": "string"
+    }
+  }
+}

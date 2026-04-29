@@ -1,8 +1,8 @@
 {
-  "collectionName": "components_sections_getting_starteds",
+  "collectionName": "components_sections_qa_stages",
   "info": {
-    "displayName": "GettingStarted",
-    "icon": "play"
+    "displayName": "QA Board Stages",
+    "icon": "tasks"
   },
   "options": {},
   "attributes": {
@@ -13,9 +13,6 @@
       "type": "component",
       "component": "shared.step",
       "repeatable": true
-    },
-    "mainCode": {
-      "type": "json"
     },
     "layout": {
       "type": "string"
