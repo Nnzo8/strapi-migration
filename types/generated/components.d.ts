@@ -79,6 +79,7 @@ export interface LandingHero extends Struct.ComponentSchema {
   attributes: {
     eyebrow: Schema.Attribute.String;
     headline: Schema.Attribute.String & Schema.Attribute.Required;
+    headlineAccent: Schema.Attribute.String;
     links: Schema.Attribute.Component<'shared.link', true>;
     subheadline: Schema.Attribute.Text;
   };
@@ -145,6 +146,20 @@ export interface SectionsBranding extends Struct.ComponentSchema {
     sidebarCollapsed: Schema.Attribute.Component<'shared.brand-asset', true>;
     sidebarExpanded: Schema.Attribute.Component<'shared.brand-asset', true>;
     subHeader: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SectionsButtonShowcase extends Struct.ComponentSchema {
+  collectionName: 'components_sections_button_showcases';
+  info: {
+    description: 'Tabbed button style specimens matching hardcoded UI/UX data.';
+    displayName: 'Button Showcase';
+    icon: 'cursor-click';
+  };
+  attributes: {
+    subHeader: Schema.Attribute.Text;
+    tabs: Schema.Attribute.Component<'shared.button-tab', true>;
     title: Schema.Attribute.String;
   };
 }
@@ -223,6 +238,7 @@ export interface SectionsGettingStarted extends Struct.ComponentSchema {
     layout: Schema.Attribute.String;
     mainCode: Schema.Attribute.JSON;
     steps: Schema.Attribute.Component<'shared.step', true>;
+    subHeader: Schema.Attribute.Text;
     title: Schema.Attribute.String;
   };
 }
@@ -231,8 +247,13 @@ export interface SectionsGrid extends Struct.ComponentSchema {
   collectionName: 'components_sections_grids';
   info: {
     displayName: 'Grid';
+    icon: 'grid';
   };
   attributes: {
+    description: Schema.Attribute.Text;
+    groups: Schema.Attribute.Component<'shared.grid-group', true>;
+    layout: Schema.Attribute.String;
+    subHeader: Schema.Attribute.Text;
     title: Schema.Attribute.String;
   };
 }
@@ -241,8 +262,13 @@ export interface SectionsIconography extends Struct.ComponentSchema {
   collectionName: 'components_sections_iconographies';
   info: {
     displayName: 'Iconography';
+    icon: 'flag';
   };
   attributes: {
+    description: Schema.Attribute.Text;
+    icons: Schema.Attribute.Component<'shared.fa-icon', true>;
+    sizes: Schema.Attribute.Component<'shared.icon-size', true>;
+    subHeader: Schema.Attribute.Text;
     title: Schema.Attribute.String;
   };
 }
@@ -255,6 +281,7 @@ export interface SectionsMistakes extends Struct.ComponentSchema {
   };
   attributes: {
     mistakeTable: Schema.Attribute.Component<'shared.table', false>;
+    subHeader: Schema.Attribute.Text;
     title: Schema.Attribute.String;
   };
 }
@@ -327,6 +354,7 @@ export interface SectionsQaStages extends Struct.ComponentSchema {
   attributes: {
     layout: Schema.Attribute.String;
     steps: Schema.Attribute.Component<'shared.step', true>;
+    subHeader: Schema.Attribute.Text;
     title: Schema.Attribute.String;
   };
 }
@@ -335,9 +363,15 @@ export interface SectionsSpacing extends Struct.ComponentSchema {
   collectionName: 'components_sections_spacings';
   info: {
     displayName: 'Spacing';
+    icon: 'move';
   };
   attributes: {
+    description: Schema.Attribute.Text;
+    groups: Schema.Attribute.Component<'shared.spacing-group', true>;
+    note: Schema.Attribute.Text;
+    subHeader: Schema.Attribute.Text;
     title: Schema.Attribute.String;
+    type: Schema.Attribute.String;
   };
 }
 
@@ -349,6 +383,7 @@ export interface SectionsTechStack extends Struct.ComponentSchema {
   };
   attributes: {
     dataTable: Schema.Attribute.Component<'shared.table', false>;
+    subHeader: Schema.Attribute.Text;
     title: Schema.Attribute.String;
   };
 }
@@ -383,6 +418,19 @@ export interface SharedBrandAsset extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedButtonTab extends Struct.ComponentSchema {
+  collectionName: 'components_shared_button_tabs';
+  info: {
+    displayName: 'Button Tab';
+    icon: 'folder';
+  };
+  attributes: {
+    defaultTag: Schema.Attribute.String;
+    label: Schema.Attribute.String;
+    variant: Schema.Attribute.String;
+  };
+}
+
 export interface SharedCallout extends Struct.ComponentSchema {
   collectionName: 'components_shared_callouts';
   info: {
@@ -413,7 +461,7 @@ export interface SharedCodeStep extends Struct.ComponentSchema {
     displayName: 'code-step';
   };
   attributes: {
-    code: Schema.Attribute.String;
+    code: Schema.Attribute.Text;
     description: Schema.Attribute.Text;
     language: Schema.Attribute.String;
     title: Schema.Attribute.String;
@@ -487,6 +535,43 @@ export interface SharedContact extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedFaIcon extends Struct.ComponentSchema {
+  collectionName: 'components_shared_fa_icons';
+  info: {
+    displayName: 'FA Icon';
+    icon: 'flag';
+  };
+  attributes: {
+    description: Schema.Attribute.String;
+    faClass: Schema.Attribute.String;
+    name: Schema.Attribute.String;
+  };
+}
+
+export interface SharedGridGroup extends Struct.ComponentSchema {
+  collectionName: 'components_shared_grid_groups';
+  info: {
+    displayName: 'Grid Group';
+    icon: 'grid';
+  };
+  attributes: {
+    screens: Schema.Attribute.Component<'shared.screen-size', true>;
+    sectionLabel: Schema.Attribute.String;
+    tierLabel: Schema.Attribute.String;
+  };
+}
+
+export interface SharedIconSize extends Struct.ComponentSchema {
+  collectionName: 'components_shared_icon_sizes';
+  info: {
+    displayName: 'Icon Size';
+    icon: 'maximize';
+  };
+  attributes: {
+    px: Schema.Attribute.Integer;
+  };
+}
+
 export interface SharedLink extends Struct.ComponentSchema {
   collectionName: 'components_shared_links';
   info: {
@@ -529,6 +614,18 @@ export interface SharedProjectMeta extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedScreenSize extends Struct.ComponentSchema {
+  collectionName: 'components_shared_screen_sizes';
+  info: {
+    displayName: 'Screen Size';
+    icon: 'monitor';
+  };
+  attributes: {
+    height: Schema.Attribute.Integer;
+    width: Schema.Attribute.Integer;
+  };
+}
+
 export interface SharedSimpleText extends Struct.ComponentSchema {
   collectionName: 'components_shared_simple_texts';
   info: {
@@ -537,6 +634,34 @@ export interface SharedSimpleText extends Struct.ComponentSchema {
   };
   attributes: {
     text: Schema.Attribute.Text;
+  };
+}
+
+export interface SharedSpacingGroup extends Struct.ComponentSchema {
+  collectionName: 'components_shared_spacing_groups';
+  info: {
+    displayName: 'Spacing Group';
+    icon: 'layers';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    label: Schema.Attribute.String;
+    tokens: Schema.Attribute.Component<'shared.spacing-token', true>;
+  };
+}
+
+export interface SharedSpacingToken extends Struct.ComponentSchema {
+  collectionName: 'components_shared_spacing_tokens';
+  info: {
+    displayName: 'Spacing Token';
+    icon: 'move';
+  };
+  attributes: {
+    name: Schema.Attribute.String;
+    px: Schema.Attribute.Integer;
+    rem: Schema.Attribute.String;
+    tailwind: Schema.Attribute.String;
+    usage: Schema.Attribute.String;
   };
 }
 
@@ -670,6 +795,7 @@ declare module '@strapi/strapi' {
       'landing.tag-item': LandingTagItem;
       'landing.team-showcase': LandingTeamShowcase;
       'sections.branding': SectionsBranding;
+      'sections.button-showcase': SectionsButtonShowcase;
       'sections.color-palette': SectionsColorPalette;
       'sections.contact-card': SectionsContactCard;
       'sections.contact-list': SectionsContactList;
@@ -687,6 +813,7 @@ declare module '@strapi/strapi' {
       'sections.tech-stack': SectionsTechStack;
       'sections.typography-scale': SectionsTypographyScale;
       'shared.brand-asset': SharedBrandAsset;
+      'shared.button-tab': SharedButtonTab;
       'shared.callout': SharedCallout;
       'shared.code-block': SharedCodeBlock;
       'shared.code-step': SharedCodeStep;
@@ -695,10 +822,16 @@ declare module '@strapi/strapi' {
       'shared.color-swatch': SharedColorSwatch;
       'shared.color-tab': SharedColorTab;
       'shared.contact': SharedContact;
+      'shared.fa-icon': SharedFaIcon;
+      'shared.grid-group': SharedGridGroup;
+      'shared.icon-size': SharedIconSize;
       'shared.link': SharedLink;
       'shared.pattern': SharedPattern;
       'shared.project-meta': SharedProjectMeta;
+      'shared.screen-size': SharedScreenSize;
       'shared.simple-text': SharedSimpleText;
+      'shared.spacing-group': SharedSpacingGroup;
+      'shared.spacing-token': SharedSpacingToken;
       'shared.step': SharedStep;
       'shared.table': SharedTable;
       'shared.table-cell': SharedTableCell;

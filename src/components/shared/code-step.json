@@ -12,7 +12,7 @@
       "type": "text"
     },
     "code": {
-      "type": "string"
+      "type": "text"
     },
     "language": {
       "type": "string"

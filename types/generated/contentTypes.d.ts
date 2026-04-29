@@ -447,6 +447,7 @@ export interface ApiAboutAbout extends Struct.SingleTypeSchema {
         'sections.branding',
         'sections.phase-showcase',
         'sections.qa-stages',
+        'sections.button-showcase',
         'sections.typography-scale',
       ]
     >;
@@ -528,6 +529,37 @@ export interface ApiLandingPageLandingPage extends Struct.SingleTypeSchema {
       ]
     >;
     title: Schema.Attribute.String & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiNavbarNavbar extends Struct.SingleTypeSchema {
+  collectionName: 'navbars';
+  info: {
+    displayName: 'Navbar';
+    pluralName: 'navbars';
+    singularName: 'navbar';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    cta: Schema.Attribute.Component<'shared.link', false>;
+    links: Schema.Attribute.Component<'shared.link', true>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::navbar.navbar'
+    > &
+      Schema.Attribute.Private;
+    logoSubtext: Schema.Attribute.String;
+    logoText: Schema.Attribute.String & Schema.Attribute.Required;
+    publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -616,6 +648,7 @@ export interface ApiTeamTeam extends Struct.CollectionTypeSchema {
         'sections.grid',
         'sections.iconography',
         'sections.spacing',
+        'sections.button-showcase',
         'sections.typography-scale',
       ]
     >;
@@ -1178,6 +1211,7 @@ declare module '@strapi/strapi' {
       'api::about.about': ApiAboutAbout;
       'api::global.global': ApiGlobalGlobal;
       'api::landing-page.landing-page': ApiLandingPageLandingPage;
+      'api::navbar.navbar': ApiNavbarNavbar;
       'api::project.project': ApiProjectProject;
       'api::team.team': ApiTeamTeam;
       'api::tool.tool': ApiToolTool;
