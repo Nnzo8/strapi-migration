@@ -58,7 +58,8 @@
         "sections.iconography",
         "sections.spacing",
         "sections.button-showcase",
-        "sections.typography-scale"
+        "sections.typography-scale",
+        "sections.pi-docs"
       ]
     }
   }
