@@ -334,6 +334,20 @@ export interface SectionsPhaseShowcase extends Struct.ComponentSchema {
   };
 }
 
+export interface SectionsPiDocs extends Struct.ComponentSchema {
+  collectionName: 'components_sections_pi_docs';
+  info: {
+    description: 'Pi Player documents section loaded dynamically from Supabase';
+    displayName: 'Pi Docs';
+    icon: 'file';
+  };
+  attributes: {
+    key: Schema.Attribute.String;
+    subHeader: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface SectionsProjects extends Struct.ComponentSchema {
   collectionName: 'components_sections_projects';
   info: {
@@ -807,6 +821,7 @@ declare module '@strapi/strapi' {
       'sections.mistakes': SectionsMistakes;
       'sections.nc-phase': SectionsNcPhase;
       'sections.phase-showcase': SectionsPhaseShowcase;
+      'sections.pi-docs': SectionsPiDocs;
       'sections.projects': SectionsProjects;
       'sections.qa-stages': SectionsQaStages;
       'sections.spacing': SectionsSpacing;

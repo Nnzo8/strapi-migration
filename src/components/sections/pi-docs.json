@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_sections_pi_docs",
+  "info": {
+    "displayName": "Pi Docs",
+    "icon": "file",
+    "description": "Pi Player documents section loaded dynamically from Supabase"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subHeader": {
+      "type": "string"
+    },
+    "key": {
+      "type": "string"
+    }
+  }
+}

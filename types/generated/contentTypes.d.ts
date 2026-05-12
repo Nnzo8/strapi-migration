@@ -651,6 +651,7 @@ export interface ApiTeamTeam extends Struct.CollectionTypeSchema {
         'sections.spacing',
         'sections.button-showcase',
         'sections.typography-scale',
+        'sections.pi-docs',
       ]
     >;
     subtitle: Schema.Attribute.String;
